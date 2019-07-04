@@ -1,0 +1,292 @@
+
+
+Action: spotify-this-song Let It Go
+Artist default: James Bay
+Name of the Song: Let It Go
+Preview Link: null
+Album: Chaos And The Calm
+
+Action: spotify-this-song Sit still look pretty
+
+Action: spotify-this-song Sit Still, Look Pretty
+Artist default: Daya
+Name of the Song: Sit Still, Look Pretty
+Preview Link: https://p.scdn.co/mp3-preview/f935ab30cab29ffcea790f910f04cfa88ad67a0e?cid=aacb8d59ec0e4caf92f11f83926b4cb1
+Album: Sit Still, Look Pretty
+Action: concert-this Jonas Brothers
+ Name of the Venue 0: American Airlines Arena
+ Venue Location: Miami,FL,United States
+ Date of the Event: 08/07/2019
+ Name of the Venue 1: Amway Center
+ Venue Location: Orlando,FL,United States
+ Date of the Event: 08/09/2019
+ Name of the Venue 2: Amalie Arena
+ Venue Location: Tampa,FL,United States
+ Date of the Event: 08/10/2019
+ Name of the Venue 3: State Farm Arena
+ Venue Location: Atlanta,FL,United States
+ Date of the Event: 08/12/2019
+ Name of the Venue 4: PNC Arena
+ Venue Location: Raleigh,FL,United States
+ Date of the Event: 08/14/2019
+ Name of the Venue 5: Capital One Arena
+ Venue Location: Washington,FL,United States
+ Date of the Event: 08/15/2019
+ Name of the Venue 6: TD Garden
+ Venue Location: Boston,FL,United States
+ Date of the Event: 08/17/2019
+ Name of the Venue 7: Wells Fargo Center
+ Venue Location: Philadelphia,FL,United States
+ Date of the Event: 08/18/2019
+ Name of the Venue 8: Times Union Center
+ Venue Location: Albany,FL,United States
+ Date of the Event: 08/19/2019
+ Name of the Venue 9: Mohegan Sun Arena
+ Venue Location: Montville Center,FL,United States
+ Date of the Event: 08/21/2019
+ Name of the Venue 10: Scotiabank Arena
+ Venue Location: Toronto,FL,Canada
+ Date of the Event: 08/23/2019
+ Name of the Venue 11: Scotiabank Arena
+ Venue Location: Toronto,FL,Canada
+ Date of the Event: 08/24/2019
+ Name of the Venue 12: KeyBank Center
+ Venue Location: Buffalo,FL,United States
+ Date of the Event: 08/27/2019
+ Name of the Venue 13: Madison Square Garden
+ Venue Location: New York,FL,United States
+ Date of the Event: 08/29/2019
+ Name of the Venue 14: Madison Square Garden
+ Venue Location: New York,FL,United States
+ Date of the Event: 08/30/2019
+ Name of the Venue 15: Hersheypark Stadium
+ Venue Location: Hershey,FL,United States
+ Date of the Event: 08/31/2019
+ Name of the Venue 16: PPG Paints Arena
+ Venue Location: Pittsburgh,FL,United States
+ Date of the Event: 09/03/2019
+ Name of the Venue 17: Bryce Jordan Center
+ Venue Location: University Park,FL,United States
+ Date of the Event: 09/04/2019
+ Name of the Venue 18: Schottenstein Center
+ Venue Location: Columbus,FL,United States
+ Date of the Event: 09/05/2019
+ Name of the Venue 19: Little Caesars Arena
+ Venue Location: Detroit,FL,United States
+ Date of the Event: 09/07/2019
+ Name of the Venue 20: Van Andel Arena
+ Venue Location: Grand Rapids,FL,United States
+ Date of the Event: 09/08/2019
+ Name of the Venue 21: Bridgestone Arena
+ Venue Location: Nashville,FL,United States
+ Date of the Event: 09/10/2019
+ Name of the Venue 22: U.S. Bank Arena
+ Venue Location: Cincinnati,FL,United States
+ Date of the Event: 09/11/2019
+ Name of the Venue 23: Bankers Life Fieldhouse
+ Venue Location: Indianapolis,FL,United States
+ Date of the Event: 09/13/2019
+ Name of the Venue 24: Enterprise Center
+ Venue Location: Saint Louis,FL,United States
+ Date of the Event: 09/14/2019
+ Name of the Venue 25: Xcel Energy Center
+ Venue Location: St Paul,FL,United States
+ Date of the Event: 09/16/2019
+ Name of the Venue 26: Fiserv Forum
+ Venue Location: Milwaukee,FL,United States
+ Date of the Event: 09/17/2019
+ Name of the Venue 27: United Center
+ Venue Location: Chicago,FL,United States
+ Date of the Event: 09/19/2019
+ Name of the Venue 28: United Center
+ Venue Location: Chicago,FL,United States
+ Date of the Event: 09/20/2019
+ Name of the Venue 29: Sprint Center
+ Venue Location: Kansas City,FL,United States
+ Date of the Event: 09/22/2019
+ Name of the Venue 30: American Airlines Center
+ Venue Location: Dallas,FL,United States
+ Date of the Event: 09/25/2019
+ Name of the Venue 31: Toyota Center
+ Venue Location: Houston,FL,United States
+ Date of the Event: 09/26/2019
+ Name of the Venue 32: AT&T Center
+ Venue Location: San Antonio,FL,United States
+ Date of the Event: 09/27/2019
+ Name of the Venue 33: BOK Center
+ Venue Location: Tulsa,FL,United States
+ Date of the Event: 09/29/2019
+ Name of the Venue 34: Pepsi Center
+ Venue Location: Denver,FL,United States
+ Date of the Event: 10/01/2019
+ Name of the Venue 35: Vivint Smart Home Arena
+ Venue Location: Salt Lake City,FL,United States
+ Date of the Event: 10/03/2019
+ Name of the Venue 36: Talking Stick Resort Arena
+ Venue Location: Phoenix,FL,United States
+ Date of the Event: 10/05/2019
+ Name of the Venue 37: Honda Center
+ Venue Location: Anaheim,FL,United States
+ Date of the Event: 10/06/2019
+ Name of the Venue 38: Chase Center
+ Venue Location: San Francisco,FL,United States
+ Date of the Event: 10/08/2019
+ Name of the Venue 39: Rogers Arena
+ Venue Location: Vancouver,FL,Canada
+ Date of the Event: 10/11/2019
+ Name of the Venue 40: Tacoma Dome
+ Venue Location: Tacoma,FL,United States
+ Date of the Event: 10/12/2019
+ Name of the Venue 41: Moda Center
+ Venue Location: Portland,FL,United States
+ Date of the Event: 10/13/2019
+ Name of the Venue 42: Golden 1 Center
+ Venue Location: Sacramento,FL,United States
+ Date of the Event: 10/15/2019
+ Name of the Venue 43: Pechanga Arena San Diego
+ Venue Location: San Diego,FL,United States
+ Date of the Event: 10/17/2019
+ Name of the Venue 44: MGM Grand Garden Arena
+ Venue Location: Las Vegas,FL,United States
+ Date of the Event: 10/18/2019
+ Name of the Venue 45: Hollywood Bowl
+ Venue Location: Los Angeles,FL,United States
+ Date of the Event: 10/20/2019
+ Name of the Venue 46: Hollywood Bowl
+ Venue Location: Los Angeles,FL,United States
+ Date of the Event: 10/21/2019
+ Name of the Venue 47: Auditorio Citibanamex
+ Venue Location: Monterrey,FL,Mexico
+ Date of the Event: 10/27/2019
+ Name of the Venue 48: Auditorio Citibanamex
+ Venue Location: Monterrey,FL,Mexico
+ Date of the Event: 10/28/2019
+ Name of the Venue 49: RB PALACIO DE LOS DEPORTES
+ Venue Location: Nuevo Mexico,FL,Mexico
+ Date of the Event: 10/30/2019
+ Name of the Venue 50: Palacio de los Deportes
+ Venue Location: Nuevo Mexico,FL,Mexico
+ Date of the Event: 10/31/2019
+ Name of the Venue 51: Arena VFG
+ Venue Location: Ojo De Agua De Los Negros,FL,Mexico
+ Date of the Event: 11/02/2019
+ Name of the Venue 52: Smoothie King Center
+ Venue Location: New Orleans,FL,United States
+ Date of the Event: 11/12/2019
+ Name of the Venue 53: Legacy Arena
+ Venue Location: Birmingham,FL,United States
+ Date of the Event: 11/13/2019
+ Name of the Venue 54: BB&T Center
+ Venue Location: Sunrise,FL,United States
+ Date of the Event: 11/15/2019
+ Name of the Venue 55: Amway Center
+ Venue Location: Orlando,FL,United States
+ Date of the Event: 11/16/2019
+ Name of the Venue 56: VyStar Veterans Memorial Arena
+ Venue Location: Jacksonville,FL,United States
+ Date of the Event: 11/17/2019
+ Name of the Venue 57: Infinite Energy Arena
+ Venue Location: Duluth,FL,United States
+ Date of the Event: 11/19/2019
+ Name of the Venue 58: Spectrum Center
+ Venue Location: Charlotte,FL,United States
+ Date of the Event: 11/20/2019
+ Name of the Venue 59: Prudential Center
+ Venue Location: Newark,FL,United States
+ Date of the Event: 11/22/2019
+ Name of the Venue 60: Barclays Center
+ Venue Location: Brooklyn,FL,United States
+ Date of the Event: 11/23/2019
+ Name of the Venue 61: TD Garden
+ Venue Location: Boston,FL,United States
+ Date of the Event: 11/24/2019
+ Name of the Venue 62: Scotiabank Arena
+ Venue Location: Toronto,FL,Canada
+ Date of the Event: 11/26/2019
+ Name of the Venue 63: Bell Centre
+ Venue Location: Montreal,FL,Canada
+ Date of the Event: 11/27/2019
+ Name of the Venue 64: Boardwalk Hall
+ Venue Location: Atlantic City,FL,United States
+ Date of the Event: 11/29/2019
+ Name of the Venue 65: Royal Farms Arena
+ Venue Location: Baltimore,FL,United States
+ Date of the Event: 11/30/2019
+ Name of the Venue 66: Allstate Arena
+ Venue Location: Rosemont,FL,United States
+ Date of the Event: 12/03/2019
+ Name of the Venue 67: CHI Health Center Omaha
+ Venue Location: Omaha,FL,United States
+ Date of the Event: 12/04/2019
+ Name of the Venue 68: American Airlines Center
+ Venue Location: Dallas,FL,United States
+ Date of the Event: 12/06/2019
+ Name of the Venue 69: Frank C Erwin Special Events Center
+ Venue Location: Austin,FL,United States
+ Date of the Event: 12/07/2019
+ Name of the Venue 70: Talking Stick Resort Arena
+ Venue Location: Phoenix,FL,United States
+ Date of the Event: 12/10/2019
+ Name of the Venue 71: Oracle Arena
+ Venue Location: Oakland,FL,United States
+ Date of the Event: 12/12/2019
+ Name of the Venue 72: The Forum
+ Venue Location: Los Angeles,FL,United States
+ Date of the Event: 12/14/2019
+ Name of the Venue 73: The Forum
+ Venue Location: Los Angeles,FL,United States
+ Date of the Event: 12/15/2019
+ Name of the Venue 74: Arena Birmingham
+ Venue Location: Birmingham,FL,United Kingdom
+ Date of the Event: 01/29/2020
+ Name of the Venue 75: 3Arena
+ Venue Location: Dublin,FL,Ireland
+ Date of the Event: 01/31/2020
+ Name of the Venue 76: The O2
+ Venue Location: London,FL,United Kingdom
+ Date of the Event: 02/02/2020
+ Name of the Venue 77: The SSE Arena, Wembley
+ Venue Location: London,FL,United Kingdom
+ Date of the Event: 02/03/2020
+ Name of the Venue 78: SSE Hydro
+ Venue Location: Glasgow,FL,United Kingdom
+ Date of the Event: 02/05/2020
+ Name of the Venue 79: Manchester Arena
+ Venue Location: Manchester,FL,United Kingdom
+ Date of the Event: 02/06/2020
+ Name of the Venue 80: Lotto Arena
+ Venue Location: Antwerpen,FL,Belgium
+ Date of the Event: 02/08/2020
+ Name of the Venue 81: Mercedes-Benz Arena
+ Venue Location: Berlin,FL,Germany
+ Date of the Event: 02/10/2020
+ Name of the Venue 82: Lanxess Arena
+ Venue Location: Köln,FL,Germany
+ Date of the Event: 02/11/2020
+ Name of the Venue 83: Hallenstadion
+ Venue Location: Zürich,FL,Switzerland
+ Date of the Event: 02/13/2020
+ Name of the Venue 84: Mediolanum Forum
+ Venue Location: Assago,FL,Italy
+ Date of the Event: 02/14/2020
+ Name of the Venue 85: Wizin Center
+ Venue Location: Madrid,FL,Spain
+ Date of the Event: 02/16/2020
+ Name of the Venue 86: Palau Sant Jordi
+ Venue Location: Barcelona,FL,Spain
+ Date of the Event: 02/17/2020
+ Name of the Venue 87: SUD DE FRANCE ARENA
+ Venue Location: Pérols,FL,France
+ Date of the Event: 02/18/2020
+ Name of the Venue 88: Ziggo Dome
+ Venue Location: Amsterdam,FL,Netherlands
+ Date of the Event: 02/20/2020
+ Name of the Venue 89: Accorhotels Arena
+ Venue Location: Paris,FL,France
+ Date of the Event: 02/22/2020
+
+Action: spotify-this-song 
+Artist default: Ace of Base
+Name of the Song: The Sign
+Preview Link: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=aacb8d59ec0e4caf92f11f83926b4cb1
+Album: The Sign (US Album) [Remastered]
