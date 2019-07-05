@@ -106,4 +106,5 @@ https://github.com/helenhao888/liri-node-app.git
  ![movie movie-name](images/movieWithoutName.jpg)
  
  10. `node liri do-what-it-syas`
+ Do what it says in random.txt
  ![do what it says in random.txt](images/doWhatItSays.jpg)
