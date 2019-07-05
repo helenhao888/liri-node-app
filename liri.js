@@ -47,19 +47,20 @@ function processAction(){
 
 processAction();
 
-
+//call bands in town API using axios to get the artist's venue information
 function searchConcert(){
   
     var artistBandName = getParameter();
     var log="";    
     var artistUrl = "https://rest.bandsintown.com/artists/";
+    
 
-    artistUrl=artistUrl+artistBandName+"/events?app_id=codingbootcamp";
+    artistUrl=artistUrl+artistBandName+"/events?app_id="+keys.bands.id;
     
     axios
         .get(artistUrl)
         .then(function(response){
-            
+           
             for(var j=0;j<response.data.length;j++){
                 var dateConv=moment(response.data[j].datetime).format("MM/DD/YYYY");  
                 console.log( chalk.blue.bgYellow.bold("\n\n Name of the Venue "+(j+1)+": "+response.data[j].venue.name));
@@ -149,22 +150,29 @@ function movie(){
   }
 
   var movieUrl="https://www.omdbapi.com/?t="+movie+"&y=&plot=short&apikey="  +process.env.OMDB_KEY;
+
+  log= "\n\nAction: "+ action+" "+movie;
+
   axios
   .get(movieUrl)
         .then(function(response){
-
-          console.log(chalk.blue.bgYellow.bold("\n\nTitle: ")+response.data.Title+chalk.blue.bgYellow.bold("\n\nYear:  ")+response.data.Year);
-          console.log(chalk.blue.bgYellow.bold("\nIMDB Ratings: "),response.data.imdbRating,chalk.blue.bgYellow.bold("\n\nRotten Tomatoes Ratings: "),response.data.Ratings[1].Value);
-          console.log(chalk.blue.bgYellow.bold("\nCountry: "),response.data.Country,chalk.blue.bgYellow.bold("\n\nPlot:  "),response.data.Plot);
-          console.log(chalk.blue.bgYellow.bold("\nActors: "),response.data.Actors);
           
-          log= "\n\nAction: "+ action+" "+movie+
-               "\nTitle: "+response.data.Title+"\nYear:  "+response.data.Year+
-               "\nIMDB Ratings: "+response.data.imdbRating+"\nRotten Tomatoes Ratings: "+response.data.Ratings[1].Value+
-               "\nCountry: "+response.data.Country+"\nPlot:  "+response.data.Plot+
-               "\nActors: "+response.data.Actors;
-
-          writeLogFile(log);
+          if(response.data.Error === undefined){
+              console.log(chalk.blue.bgYellow.bold("\n\nTitle: ")+response.data.Title+chalk.blue.bgYellow.bold("\n\nYear:  ")+response.data.Year);
+              console.log(chalk.blue.bgYellow.bold("\nIMDB Ratings: "),response.data.imdbRating,chalk.blue.bgYellow.bold("\n\nRotten Tomatoes Ratings: "),response.data.Ratings[1].Value);
+              console.log(chalk.blue.bgYellow.bold("\nCountry: "),response.data.Country,chalk.blue.bgYellow.bold("\n\nPlot:  "),response.data.Plot);
+              console.log(chalk.blue.bgYellow.bold("\nActors: "),response.data.Actors);
+              
+              log+= "\nTitle: "+response.data.Title+"\nYear:  "+response.data.Year+
+                    "\nIMDB Ratings: "+response.data.imdbRating+"\nRotten Tomatoes Ratings: "+response.data.Ratings[1].Value+
+                    "\nCountry: "+response.data.Country+"\nPlot:  "+response.data.Plot+
+                    "\nActors: "+response.data.Actors;
+              writeLogFile(log);
+          }else{
+              console.log(errorChalk("\nError : ",response.data.Error));
+              log+="\n Error : "+response.data.Error;
+              writeLogFile(log);
+          }
         })
 
         .catch(function(error) {
@@ -185,11 +193,16 @@ function movie(){
           });
 }
 
+//use the action in random.txt to fire an action
 function doWhatItSays(){
 
   var dataArr=[];
   var log="";
 
+  log="\nAction: "+process.argv[2];
+  writeLogFile(log);
+
+  //read the file random.txt to get the action
   fs.readFile("random.txt","utf-8",function(error,data){
     // If the code experiences any errors it will log the error to the console.
     if(error){
@@ -199,13 +212,13 @@ function doWhatItSays(){
     dataArr=data.split(",");
 
     for(i=1,j=3;i<dataArr.length;i++,j++){
-      process.argv[j]=dataArr[i];
+      //remove the double quotes in the array
+      var convData=dataArr[i].replace(/"/g,"");
+      process.argv[j]=convData;
     }
-    console.log("parm",process.argv);
-    //?????????????need to remove "" read from random.txt 
+    
     action=dataArr[0];
-    log="\nAction: "+action;
-    writeLogFile(log);
+    
     processAction();
   })
  
@@ -214,8 +227,21 @@ function doWhatItSays(){
 function getParameter(){
  // Get all elements in process.argv, starting from index 3 to the end
  // Join them into a string to get the space delimited address
-  var resultParm=process.argv.slice(3).join(" ");    
+  var resultParm;
+  var parmArr=[];
   
+  //concert-this call the bands in town api, which is case sensitive. the first letter of artist name must be upper case and the rest is lower case. 
+  if (action === "concert-this"){
+      for (i=3;i<process.argv.length;i++){
+        var lowParm=process.argv[i].toLowerCase()
+        var parm=lowParm.charAt(0).toUpperCase()+lowParm.slice(1);
+        parmArr.push(parm);
+      }
+      resultParm=parmArr.join(" ");
+  }else{
+      resultParm=process.argv.slice(3).join(" ");    
+  }
+
   return resultParm;
 }
 

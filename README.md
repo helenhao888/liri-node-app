@@ -17,7 +17,7 @@ https://github.com/helenhao888/liri-node-app.git
     fs package
     moment package
     chalk package
-    SPOTIFY, OMDB API
+    SPOTIFY, OMDB and bands in town API
 
  ### Instructions
  liri.js can take in one of the following commands:
@@ -100,3 +100,10 @@ https://github.com/helenhao888/liri-node-app.git
  8. `node liri movie-this`
  If don't input movie name, it displays the default movie "Mr. Nobody"
  ![movie movie-name](images/movieWithoutName.jpg)
+
+ 9. `node liri movie-this test name`
+ If input an inexistent movie name, it displays the error
+ ![movie movie-name](images/movieWithoutName.jpg)
+ 
+ 10. `node liri do-what-it-syas`
+ ![do what it says in random.txt](images/doWhatItSays.jpg)
