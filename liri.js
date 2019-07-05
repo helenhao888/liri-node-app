@@ -54,7 +54,7 @@ function searchConcert(){
     var log="";
 
     artistUrl=artistUrl+artistBandName+"/events?app_id=codingbootcamp";
-    console.log("artis",artistUrl);
+    
     axios
         .get(artistUrl)
         .then(function(response){
@@ -130,7 +130,7 @@ function spotifySong(){
             writeLogFile(log); 
           })
           .catch(function(err) {
-            console.log(err);
+            console.log(chalk.red(err));
           });     
   
 }
@@ -209,7 +209,7 @@ function getParameter(){
  // Get all elements in process.argv, starting from index 3 to the end
  // Join them into a string to get the space delimited address
   var resultParm=process.argv.slice(3).join(" ");    
-  console.log("parm",resultParm);
+  
   return resultParm;
 }
 
