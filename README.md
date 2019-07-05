@@ -72,4 +72,4 @@
 ### screenshots of the app functioning
 
  1. `node liri concert-this `
-![alt text]
+![concert artist](images/concertImg.jpg)
