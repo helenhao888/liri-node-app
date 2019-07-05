@@ -73,5 +73,30 @@ https://github.com/helenhao888/liri-node-app.git
 
 ### screenshots of the app functioning
 
- 1. `node liri concert-this `
-![concert artist](images/concertImg.jpg)
+ 1. `node lir`
+ ![no action](images/noActionImg.jpg)
+
+ 2. `node liri concert-this Rich Mahan`
+ ![concert artist](images/concertImg.jpg)
+
+ 3. `node liri concert-this Rich Mahan`
+ If input the wrong artist name
+ ![concert artist](images/concertNotFoundImg.jpg)
+
+ 4. `node liri spotify-this-song sit still, look pretty`
+ ![spotify song](images/spotifySong.jpg)
+ 
+ 5. `node liri spotify-this-song sit still, look`
+ If input the wrong song name
+ ![spotify song](images/spotifySongNotFound.jpg)
+
+ 6. `node liri spotify-this-song`
+ If don't input song name, it displays the default song "The Sign"
+ ![spotify song](images/spotifySongWithoutName.jpg)
+
+ 7. `node liri movie-this Wonder`
+ ![movie movie-name](images/movie.jpg)
+
+ 8. `node liri movie-this`
+ If don't input movie name, it displays the default movie "Mr. Nobody"
+ ![movie movie-name](images/movieWithoutName.jpg)

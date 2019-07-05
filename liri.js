@@ -8,14 +8,14 @@ var axios= require("axios");
 var moment = require("moment");
 //get fs package
 var fs = require("fs");
+//get chalk package
 var chalk=require("chalk");
+const errorChalk = chalk.bold.red;
+const warningChalk = chalk.keyword('orange');
 //get node spotify api package
 var Spotify = require("node-spotify-api"); 
-
 var spotify= new Spotify(keys.spotify);
 
-
-var artistUrl = "https://rest.bandsintown.com/artists/";
 
 //only user inputs the parameter, then change it to lower case
 if(process.argv[2]!="" && process.argv[2]!=undefined){    
@@ -51,14 +51,15 @@ processAction();
 function searchConcert(){
   
     var artistBandName = getParameter();
-    var log="";
+    var log="";    
+    var artistUrl = "https://rest.bandsintown.com/artists/";
 
     artistUrl=artistUrl+artistBandName+"/events?app_id=codingbootcamp";
     
     axios
         .get(artistUrl)
         .then(function(response){
-         
+            
             for(var j=0;j<response.data.length;j++){
                 var dateConv=moment(response.data[j].datetime).format("MM/DD/YYYY");  
                 console.log( chalk.blue.bgYellow.bold("\n\n Name of the Venue "+(j+1)+": "+response.data[j].venue.name));
@@ -69,38 +70,34 @@ function searchConcert(){
                     "\n Venue Location: "+response.data[j].venue.city+","+
                     response.data[0].venue.region+","+response.data[j].venue.country+
                     "\n Date of the Event: "+dateConv;
-
-               
             }
-
-            log="\nAction: "+ action+" "+artistBandName+log;
+            log="\n\nAction: "+ action+" "+artistBandName+log;          
             writeLogFile(log);
         })
 
         .catch(function(error) {
+          console.log(errorChalk("\nError:",error));
             if (error.response) {
               // The request was made and the server responded with a status code
               // that falls out of the range of 2xx
-              console.log(chalk.red(error.response.data));
-              console.log(chalk.red(error.response.status));
-              console.log(chalk.red(error.response.headers));
-            } else if (error.request) {
-              // The request was made but no response was received              
-                      console.log(chalk.red(error.request));
-                    } else {
-                      // Something happened in setting up the request that triggered an Error 
-                          console.log(chalk.red("Error", error.message));
-                    }
-            console.log(chalk.red(error.config));
+              console.log(errorChalk("\nError Status:",error.response.status));
+              console.log(errorChalk("\nError Text: ",error.response.statusText));
+            } 
+            log+="\nError: "+error+"\nError Status:"+error.response.status+
+                  "\nError Text: "+error.response.statusText;
+                  
+            log="\n\nAction: "+ action+" "+artistBandName+log;          
+            writeLogFile(log);      
           });
 
+         
 }    
 
 
 function spotifySong(){
-  
     
     var log="";    
+    var matchFlg=false;
     var songName = getParameter();  
    
     log="\n\nAction: "+action+" "+songName;
@@ -111,10 +108,11 @@ function spotifySong(){
       spotify
           .search({ type: "track", query: songName })
           .then(function(response) {
+          //only diaplay the song name of the reponse which is exactly the same as the input song name 
             for(var i=0;i<response.tracks.items.length;i++){
-                
-                  if( response.tracks.items[i].name === songName) { 
-                      
+             
+                  if( response.tracks.items[i].name.toLowerCase() === songName.toLowerCase() ){
+                    
                       console.log(chalk.blue.bgYellow.bold("\n\nArtist : "),response.tracks.items[i].artists[0].name);
                       console.log(chalk.blue.bgYellow.bold("\nName of the Song: "),response.tracks.items[i].name);
                       console.log(chalk.blue.bgYellow.bold("\nPreview Link: "),response.tracks.items[i].preview_url);
@@ -124,13 +122,19 @@ function spotifySong(){
                             "\nPreview Link: "+response.tracks.items[i].preview_url+
                             "\nAlbum: "+response.tracks.items[i].album.name;    
                       i=response.tracks.items.length;
-                   }                 
+                      matchFlg=true;
+                   }                                
                 
             }
+
+            if (!matchFlg) {
+                console.log(warningChalk("\n No song matached exactly as the input"));
+                log+="\n No song matached exactly as the input";
+                }  
             writeLogFile(log); 
           })
           .catch(function(err) {
-            console.log(chalk.red(err));
+            console.log(errorChalk(err));
           });     
   
 }
@@ -167,17 +171,17 @@ function movie(){
             if (error.response) {
               // The request was made and the server responded with a status code
               // that falls out of the range of 2xx
-              console.log(chalk.red(error.response.data));
-              console.log(chalk.red(error.response.status));
-              console.log(chalk.red(error.response.headers));
+              console.log(errorChalk(error.response.data));
+              console.log(errorChalk(error.response.status));
+              console.log(errorChalk(error.response.headers));
             } else if (error.request) {
               // The request was made but no response was received              
-              console.log(chalk.red(error.request));
+              console.log(errorChalk(error.request));
             } else {
               // Something happened in setting up the request that triggered an Error
-              console.log(chalk.red("Error", error.message));
+              console.log(errorChalk("Error", error.message));
             }
-            console.log(chalk.red(error.config));
+            console.log(errorChalk(error.config));
           });
 }
 
@@ -189,14 +193,16 @@ function doWhatItSays(){
   fs.readFile("random.txt","utf-8",function(error,data){
     // If the code experiences any errors it will log the error to the console.
     if(error){
-      return console.log(chalk.red("read file error: ",error));
+      return console.log(errorChalk("read file error: ",error));
     }
     
     dataArr=data.split(",");
+
     for(i=1,j=3;i<dataArr.length;i++,j++){
       process.argv[j]=dataArr[i];
     }
-    
+    console.log("parm",process.argv);
+    //?????????????need to remove "" read from random.txt 
     action=dataArr[0];
     log="\nAction: "+action;
     writeLogFile(log);
@@ -219,12 +225,12 @@ function writeLogFile(logText){
 
     // If an error was experienced we will log it.
     if (err) {
-      console.log(chalk.red("write file error : ",err));
+      console.log(errorChalk("write file error : ",err));
     }
   
     // If no error is experienced, we'll log the phrase "Content Added" to our node console.
     else {
-      console.log(chalk.grey("Content Added to liri_log.txt!"));
+      console.log(chalk.grey("\nContent Added to liri_log.txt!"));
     }
   
   });
