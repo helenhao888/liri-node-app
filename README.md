@@ -19,6 +19,12 @@ https://github.com/helenhao888/liri-node-app.git
     chalk package
     SPOTIFY, OMDB and bands in town API
 
+### Program Structure
+  *  liri.js         main javascript program
+  *  key.js          Only process the key's env arguments
+  *  .env file:      User needs to create his own .env file to store the SPOTIFY API key,                    Omdb   key  and bans in town api key.
+  *  liri_log file:  It's an output log file to store all the activities.
+
  ### Instructions
  liri.js can take in one of the following commands:
 
@@ -103,7 +109,7 @@ https://github.com/helenhao888/liri-node-app.git
 
  9. `node liri movie-this test name`
  If input an inexistent movie name, it displays the error
- ![movie movie-name](images/movieWithoutName.jpg)
+ ![movie movie-name](images/movieNotFound.jpg)
  
  10. `node liri do-what-it-syas`
  Do what it says in random.txt
